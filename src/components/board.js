@@ -40,10 +40,10 @@ function between(data, between){
 
     // sort with asending order
     return filter.sort((a, b) => {
-        if ( a.score === b.score){
-            return b.score - a.score;
+        if ( a.balance === b.balance){
+            return b.balance - a.balance;
         } else{
-            return b.score - a.score;
+            return b.balance - a.balance;
         }
     })
 
