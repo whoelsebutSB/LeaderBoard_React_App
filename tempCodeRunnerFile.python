@@ -1,0 +1,15 @@
+import theblockchainapi
+from theblockchainapi import TheBlockchainAPIResource, SolanaCurrencyUnit
+
+API_KEY = "2yqJ2XYLJUcAAbZ"
+SECRET_KEY = "XTmm7praz1fZlD0"
+
+if __name__ == '__main__':
+    resource = TheBlockchainAPIResource(
+        api_key_id=API_KEY,
+        api_secret_key=SECRET_KEY
+    )
+
+public_key = "Bj7tuUrcmWgXWZsq3JrWYXqBgf8YQnTXM3zaCdwvZjQ6ndia"
+balance = resource.get_balance(public_key, unit=SolanaCurrencyUnit.SOL)
+print(f"Wallet Balance: {balance}")
